@@ -1,0 +1,248 @@
+@import "tailwindcss/base.css";
+@import "tailwindcss/components.css";
+@import "tailwindcss/utilities.css";
+
+body {
+    font-family: 'Dosis', sans-serif;
+    background-image: url("../images/top-bg.png");
+    @apply bg-fixed;
+    @apply bg-no-repeat;
+    @apply bg-cover;
+    @apply bg-center;
+}
+
+.button {
+    @apply text-xl;
+    @apply font-extrabold;
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
+    @apply justify-center;
+    @apply py-2;
+    @apply px-10;
+    @apply rounded-3xl;
+    @apply cursor-pointer;
+    @apply transition;
+    @apply ease-in-out;
+    @apply duration-300;
+    @apply relative;
+    &.pink-button {
+        @apply text-white;
+        @apply bg-theme-pink;
+        box-shadow: inset 0px 3px 0px 0px rgba(237, 91, 253, 1);
+        &:hover {
+            @apply bg-opacity-90;
+            box-shadow: inset 0px 6px 0px 0px rgba(237, 91, 253, 1);
+        }
+        span {
+            &.online-count {
+                @apply rounded-full;
+                @apply text-center;
+                @apply bg-theme-pink-dark;
+                @apply text-sm;
+                @apply w-max;
+                @apply px-3;
+            }
+        }
+    }
+
+    &.yellow-button {
+        @apply text-theme-brown;
+        @apply bg-theme-yellow;
+        box-shadow: inset 0px 3px 0px 0px rgba(255, 237, 208, 1);        
+        &:hover {
+            @apply bg-opacity-90;
+            box-shadow: inset 0px 6px 0px 0px rgba(255, 237, 208, 1);        
+        }
+    }
+}
+
+#top-bar {
+    @apply bg-black;
+    @apply bg-opacity-50;
+    @apply font-extrabold;
+    .left-nav {
+        @apply flex;
+        @apply text-lg;
+        @apply text-theme-yellow;
+        @apply gap-8;
+        a {
+            @apply flex;
+            @apply items-center;
+            @apply justify-start;
+            img {
+                @apply mr-2;
+            }
+        }
+    }
+
+    .right-menu {
+        @apply flex;
+        @apply gap-8;
+        @apply items-center;
+        .currency-option {
+            @apply cursor-pointer;
+            @apply flex;
+            @apply items-center;
+            @apply justify-start;
+            @apply text-theme-yellow;
+            span {
+                @apply mr-2;
+            }
+        }
+
+        .sep {
+            @apply w-0.5;
+            @apply h-4;
+            @apply bg-white;
+            @apply bg-opacity-10            ;
+        }
+
+        .logout {
+            @apply cursor-pointer;
+            @apply text-theme-red;
+            @apply uppercase;
+            @apply flex;
+            @apply items-center;
+        }
+
+        .user {
+            @apply flex;
+            @apply items-center;
+            span {
+                @apply text-base;
+                @apply text-white;
+                @apply mr-3;
+            }
+
+            div {
+                img {
+                    @apply mt-2;
+                }
+            }
+        }
+    }
+}
+
+#main-nav {
+    @apply flex;
+    @apply justify-between;
+    @apply mt-5;
+    nav {
+        ul {
+            @apply flex;
+            @apply h-full;
+            @apply items-center;
+            @apply gap-14;
+            li {
+                a {
+                    @apply text-2xl;
+                    @apply font-extrabold;
+                    @apply text-white;
+                    @apply pb-2;
+                    @apply border-b-4;
+                    @apply border-transparent;
+                    @apply transition;
+                    @apply ease-in-out;
+                    @apply duration-600;
+                    &:hover {
+                        @apply border-white;
+                    }
+                }
+            }
+        }
+    }
+
+    .right-actions {
+        @apply flex;
+        @apply gap-4;
+
+        .get-modpack-button {
+            span {
+                &.online-count {
+                    @apply rounded-full;
+                    @apply text-center;
+                    @apply bg-theme-yellow-dark;
+                    @apply text-sm;
+                    @apply w-max;
+                    @apply px-3;
+                }
+            }
+        }
+    }
+}
+
+#banner {
+    .donation-goal {
+        .top {
+            @apply flex;
+            @apply justify-between;
+            @apply mb-5;
+            .label {
+                @apply flex;
+                @apply items-center;
+                @apply text-base;
+                @apply font-extrabold;
+                @apply text-theme-yellow;
+                @apply flex-1;
+                @apply uppercase;
+                img {
+                    @apply mr-2;
+                    @apply w-4;
+                    @apply h-4;
+                }
+            }
+
+            .progress-number {
+                @apply text-lg;
+                @apply font-extrabold;
+                @apply text-theme-yellow;
+            }
+        }
+
+        .bottom {
+            .progress-holder {
+                @apply bg-theme-yellow;
+                @apply bg-opacity-20;
+                @apply border;
+                @apply rounded-md;
+                @apply border-theme-yellow ;
+                @apply border-opacity-20;
+                @apply w-64;
+                @apply h-4;
+                .progress {
+                    @apply bg-theme-yellow;
+                    @apply rounded-md;
+                    @apply h-full;
+                }
+            }
+        }
+    }
+
+    .cart-button {
+        padding-left: 20px;
+        padding-right: 90px;
+        @apply w-64;
+        .cart-details {
+            @apply flex;
+            @apply flex-col;
+            @apply items-center;
+            @apply justify-center;
+            span {
+                @apply flex;
+                img {
+                    @apply mr-2;
+                }
+            }
+            .total {
+                @apply text-sm;
+                @apply font-extrabold;
+            }
+        }
+        .cart-avatar {
+            @apply absolute;
+            @apply right-5;
+            @apply bottom-0;
+        }
+    }
+}

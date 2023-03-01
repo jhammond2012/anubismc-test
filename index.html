@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Anubismc</title>
+    <!--
+        ## General Notes
+        - I have not compeleted the mobile version of the site yet. Since this was a
+        test I did not want to spend too much time on it until we moved forward with
+        a paid position. I hope this is okay
+        - I used some classed on the HTML directly. I am still getting used to where
+        I should draw the line in terms of using classes and not. I am happy to discuss
+        these further if you would like.
+        - The SVG icons are just included as images for now. Typically, in a React app,
+        I would create a component for each SVG and then import them, pass props for
+        color, size, etc.
+        - I started the project using <button> tags but was limited to what I could use
+        inside of them to keep the code valid according to standards (https://www.w3.org/TR/2012/WD-html5-20120329/the-button-element.html#the-button-element).
+    -->
+  </head>
+
+  <body>
+    <header>
+        <div id="top-bar">
+            <div class="container mx-auto flex justify-between">
+                <div class="left-nav">
+                    <!-- Would like to create a SVG component for these instead but for now just included as images -->
+                    <a href="/">
+                        <img src="./images/icons/search.svg" alt="Search" />
+                        <span>Search</span>
+                    </a>
+                    <a href="/">
+                        <img src="./images/icons/twitter.svg" alt="Twitter" />
+                        <span>Twitter</span>
+                    </a>
+                    <a href="/">
+                        <img src="./images/icons/discord.svg" alt="Discord" />
+                        <span>Discord</span>
+                    </a>
+                </div>
+
+                <div class="right-menu">
+                    <div class="currency-option">
+                        <span>USD</span>
+                        <img src="./images/icons/down-arrow.svg" alt="Down Arrow">
+                    </div>
+                    <div class="logout">Logout</div>
+                    <div class="sep"></div>
+                    <div class="user">
+                        <span>Gorsky</span>
+                        <div>
+                            <img src="./images/avatar.png" alt="User">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="main-nav">
+            <div class="container mx-auto flex justify-between">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Forums</a></li>
+                        <li><a href="#">Vote</a></li>
+                        <li><a href="#">Rules</a></li>
+                    </ul>
+                </nav>
+
+                <div class="right-actions">
+                    <div class="button yellow-button get-modpack-button">
+                        <span>Get Modpack</span>
+                        <span class="online-count">4447 Online</span>
+                    </div>
+
+                    <div class="button pink-button">
+                        <span>Store</span>
+                        <span class="online-count">10% Sale</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="banner" class="-mt-5">
+            <div class="container mx-auto flex justify-between items-end">
+                <div class="donation-goal">
+                    <div class="top">
+                        <span class="label"><img src="./images/icons/flag.svg" alt="Flag" />Donation Goal</span>
+                        <span class="progress-number">25%</span>
+                    </div>
+
+                    <div class="bottom">
+                        <div class="progress-holder">
+                            <div class="progress" style="width: 25%"></div>
+                        </div>
+                    </div>
+                </div>
+                <img src="./images/logo.png" alt="Logo" />
+                <div class="button pink-button cart-button">
+                    <div class="cart-details">
+                        <span><img src="./images/icons/cart.svg" alt="cart" />Cart (5)</span>
+                        <span class="total">30.00 USD</span>
+                    </div>
+
+                    <img src="./images/avatarlg.png" alt="Cart Avatar" class="cart-avatar" />
+                </div>
+            </div>
+        </div>
+
+        <!-- This is just here to simulate the scroll when testing the background -->
+        <div class="w-full h-screen"></div>
+    </main>
+  </body>
+</html>
